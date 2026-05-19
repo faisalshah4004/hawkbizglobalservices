@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+:root {
+  --font-playfair: 'Playfair Display', Georgia, serif;
+  --font-dm-sans: 'DM Sans', system-ui, sans-serif;
+  --gold: #C9A84C;
+  --gold-light: #E8C97A;
+  --gold-dark: #8B6914;
+  --navy: #0A1628;
+  --navy-mid: #0F2040;
+  --navy-light: #1A3260;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-dm-sans);
+  color: var(--navy);
+  overflow-x: hidden;
+}
+
+/* Swiper custom overrides */
+.swiper-pagination-bullet {
+  width: 8px !important;
+  height: 8px !important;
+  background: rgba(255, 255, 255, 0.4) !important;
+  opacity: 1 !important;
+  border-radius: 4px !important;
+  transition: all 0.3s !important;
+}
+.swiper-pagination-bullet-active {
+  width: 24px !important;
+  background: var(--gold) !important;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(201, 168, 76, 0.3) !important;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50% !important;
+  transition: all 0.2s !important;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: var(--gold) !important;
+  color: var(--navy) !important;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+/* Grid pattern utility */
+.bg-grid-pattern {
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(201,168,76,0.04) 40px, rgba(201,168,76,0.04) 41px),
+    repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(201,168,76,0.04) 40px, rgba(201,168,76,0.04) 41px);
+}
+
+@layer utilities {
+  .text-gold { color: var(--gold); }
+  .text-gold-dark { color: var(--gold-dark); }
+  .bg-navy { background-color: var(--navy); }
+  .bg-navy-mid { background-color: var(--navy-mid); }
+  .bg-navy-light { background-color: var(--navy-light); }
+}
