@@ -79,7 +79,7 @@ export default function WebDevPage() {
         <div className="absolute inset-0 bg-grid-pattern" />
         <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
           <h2 className="font-playfair text-4xl font-bold text-white mb-4">Ready to Build Your Website?</h2>
-          <p className="text-slate-400 mb-8">Share your requirements and we'll send a detailed proposal within 24 hours — no commitment required.</p>
+          <p className="text-slate-400 mb-8">Share your requirements and we&lsquo;ll send a detailed proposal within 24 hours — no commitment required.</p>
           <Link href="/contact" className="inline-block bg-gold hover:bg-gold-light text-navy font-bold px-8 py-4 rounded-xl transition-colors">
             Get a Free Quote
           </Link>

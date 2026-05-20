@@ -57,7 +57,7 @@ export default function MobileAppsPage() {
         <div className="absolute inset-0 bg-grid-pattern" />
         <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
           <h2 className="font-playfair text-4xl font-bold text-white mb-4">Got an App Idea?</h2>
-          <p className="text-slate-400 mb-8">We turn app ideas into launched products. Share your concept and we'll map out the full build plan.</p>
+          <p className="text-slate-400 mb-8">We turn app ideas into launched products. Share your concept and we&lsquo;ll map out the full build plan.</p>
           <Link href="/contact" className="inline-block bg-gold hover:bg-gold-light text-navy font-bold px-8 py-4 rounded-xl transition-colors">Get a Free Proposal</Link>
         </div>
       </section>

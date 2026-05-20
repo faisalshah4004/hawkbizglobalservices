@@ -58,7 +58,7 @@ export default function ITServicesPage() {
       <section className="bg-[#F8F6F0] py-20">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="font-playfair text-3xl font-bold text-navy mb-4">Have a Project in Mind?</h2>
-          <p className="text-slate-500 mb-8">Let's discuss your requirements. Our tech team will provide a detailed proposal within 24 hours.</p>
+          <p className="text-slate-500 mb-8">Let&lsquo;s discuss your requirements. Our tech team will provide a detailed proposal within 24 hours.</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/contact" className="inline-flex items-center gap-2 bg-navy hover:bg-navy-light text-white font-bold px-8 py-4 rounded-xl transition-colors">
               Start a Project <ArrowRight size={18} />

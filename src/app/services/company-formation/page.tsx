@@ -149,7 +149,7 @@ export default function CompanyFormationPage() {
           <h2 className="font-playfair text-4xl font-bold text-white mb-4">
             Ready to Launch Your UAE Company?
           </h2>
-          <p className="text-slate-400 mb-8">Book a free consultation — we'll identify the right structure and get you started within days.</p>
+          <p className="text-slate-400 mb-8">Book a free consultation — we&lsquo;ll identify the right structure and get you started within days.</p>
           <Link href="/book-appointment" className="inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-navy font-bold px-8 py-4 rounded-xl transition-colors">
             Book Free Consultation <ArrowRight size={18} />
           </Link>

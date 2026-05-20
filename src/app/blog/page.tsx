@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { PageHero, SectionHeader } from '@/components/shared'
+import { PageHero } from '@/components/shared'
 
 export const metadata: Metadata = {
   title: 'Blog | Business Setup Tips & UAE Business News | HawkBiz',

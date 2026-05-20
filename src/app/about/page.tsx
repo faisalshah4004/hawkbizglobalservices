@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { CheckCircle2, ArrowRight } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { PageHero, SectionHeader, StatsStrip, Stars } from '@/components/shared'
-import { STATS, TESTIMONIALS, SITE } from '@/lib/data'
+import { STATS, TESTIMONIALS } from '@/lib/data'
 
 export const metadata: Metadata = {
   title: 'About Us | HawkBiz Global Services Dubai',
@@ -53,7 +53,7 @@ export default function AboutPage() {
             />
             <p className="text-slate-500 leading-relaxed mb-5">
               We founded HawkBiz with a single purpose: to remove the complexity and confusion from
-              doing business in the UAE. Whether you're an entrepreneur setting up your first company
+              doing business in the UAE. Whether you&lsquo;re an entrepreneur setting up your first company
               or a multinational expanding into the Middle East, the regulations, procedures, and
               paperwork can be overwhelming.
             </p>

@@ -51,7 +51,7 @@ export default function SEOMarketingPage() {
         <div className="absolute inset-0 bg-grid-pattern" />
         <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
           <h2 className="font-playfair text-4xl font-bold text-white mb-4">Grow Your Business Online</h2>
-          <p className="text-slate-400 mb-8">Book a free digital marketing audit — we'll review your current presence and show you the exact opportunities to grow.</p>
+          <p className="text-slate-400 mb-8">Book a free digital marketing audit — we&lsquo;ll review your current presence and show you the exact opportunities to grow.</p>
           <Link href="/contact" className="inline-block bg-gold hover:bg-gold-light text-navy font-bold px-8 py-4 rounded-xl transition-colors">Get Free Audit</Link>
         </div>
       </section>

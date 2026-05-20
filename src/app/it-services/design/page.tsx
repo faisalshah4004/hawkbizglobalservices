@@ -45,7 +45,7 @@ export default function DesignPage() {
         <div className="absolute inset-0 bg-grid-pattern" />
         <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
           <h2 className="font-playfair text-4xl font-bold text-white mb-4">Ready to Elevate Your Brand?</h2>
-          <p className="text-slate-400 mb-8">Tell us about your brand and we'll put together a design package that fits your goals and budget.</p>
+          <p className="text-slate-400 mb-8">Tell us about your brand and we&lsquo;ll put together a design package that fits your goals and budget.</p>
           <Link href="/contact" className="inline-block bg-gold hover:bg-gold-light text-navy font-bold px-8 py-4 rounded-xl transition-colors">Start a Design Project</Link>
         </div>
       </section>

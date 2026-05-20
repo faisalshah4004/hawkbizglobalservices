@@ -1,8 +1,5 @@
-'use client'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
-import { MessageCircle } from 'lucide-react'
-import { SITE } from '@/lib/data'
 
 // ─── Section Tag ──────────────────────────────────────────────
 export function SectionTag({ children, light = false }: { children: React.ReactNode; light?: boolean }) {
@@ -22,11 +19,7 @@ export function SectionTag({ children, light = false }: { children: React.ReactN
 
 // ─── Section Header ───────────────────────────────────────────
 export function SectionHeader({
-  tag,
-  title,
-  subtitle,
-  center = false,
-  light = false,
+  tag, title, subtitle, center = false, light = false,
 }: {
   tag?: string
   title: React.ReactNode
@@ -60,60 +53,9 @@ export function SectionHeader({
   )
 }
 
-// ─── Button ───────────────────────────────────────────────────
-interface ButtonProps {
-  href?: string
-  onClick?: () => void
-  variant?: 'gold' | 'outline' | 'ghost'
-  size?: 'sm' | 'md' | 'lg'
-  children: React.ReactNode
-  className?: string
-  external?: boolean
-}
-
-export function Button({
-  href,
-  onClick,
-  variant = 'gold',
-  size = 'md',
-  children,
-  className,
-  external,
-}: ButtonProps) {
-  const base = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200'
-  const sizes = {
-    sm: 'text-xs px-4 py-2',
-    md: 'text-sm px-6 py-3',
-    lg: 'text-base px-8 py-4',
-  }
-  const variants = {
-    gold: 'bg-gold hover:bg-gold-light text-navy',
-    outline: 'bg-transparent border border-white/30 text-white hover:border-gold hover:text-gold',
-    ghost: 'bg-transparent text-gold-dark hover:text-gold border border-gold/30 hover:border-gold',
-  }
-  const cls = cn(base, sizes[size], variants[variant], className)
-
-  if (href) {
-    return (
-      <Link href={href} className={cls} {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>
-        {children}
-      </Link>
-    )
-  }
-  return (
-    <button onClick={onClick} className={cls}>
-      {children}
-    </button>
-  )
-}
-
 // ─── Service Card ─────────────────────────────────────────────
 export function ServiceCard({
-  icon,
-  title,
-  description,
-  href,
-  dark = false,
+  icon, title, description, href, dark = false,
 }: {
   icon: string
   title: string
@@ -131,12 +73,7 @@ export function ServiceCard({
           : 'bg-white border-slate-100 hover:border-gold hover:shadow-xl hover:shadow-navy/10'
       )}
     >
-      <div
-        className={cn(
-          'w-12 h-12 rounded-xl flex items-center justify-center text-2xl transition-colors',
-          dark ? 'bg-gold/10 group-hover:bg-gold/20' : 'bg-gold/10 group-hover:bg-gold/20'
-        )}
-      >
+      <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl bg-gold/10 group-hover:bg-gold/20 transition-colors">
         {icon}
       </div>
       <h3 className={cn('font-semibold text-base', dark ? 'text-white' : 'text-navy')}>
@@ -145,20 +82,19 @@ export function ServiceCard({
       <p className={cn('text-sm leading-relaxed', dark ? 'text-slate-500' : 'text-slate-400')}>
         {description}
       </p>
-      <span className={cn('text-sm font-medium mt-auto opacity-0 group-hover:opacity-100 transition-opacity', dark ? 'text-gold' : 'text-gold-dark')}>
+      <span className={cn(
+        'text-sm font-medium mt-auto opacity-0 group-hover:opacity-100 transition-opacity',
+        dark ? 'text-gold' : 'text-gold-dark'
+      )}>
         Learn more →
       </span>
     </Link>
   )
 }
 
-// ─── IT Card ─────────────────────────────────────────────────
+// ─── IT Card ──────────────────────────────────────────────────
 export function ITCard({
-  icon,
-  title,
-  description,
-  tags,
-  href,
+  icon, title, description, tags, href,
 }: {
   icon: string
   title: string
@@ -181,35 +117,16 @@ export function ITCard({
           </span>
         ))}
       </div>
-      <span className="text-gold-dark text-sm font-semibold group-hover:gap-3 flex items-center gap-2 transition-all">
+      <span className="text-gold-dark text-sm font-semibold flex items-center gap-2 transition-all group-hover:gap-3">
         Learn more →
       </span>
     </Link>
   )
 }
 
-// ─── WhatsApp Floating Button ─────────────────────────────────
-export function WhatsAppButton() {
-  return (
-    <a
-      href={SITE.whatsapp}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Chat on WhatsApp"
-      className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-transform hover:scale-110 active:scale-95"
-      style={{ backgroundColor: '#25D366' }}
-    >
-      <MessageCircle size={26} className="text-white fill-white" />
-    </a>
-  )
-}
-
 // ─── Page Hero Banner ─────────────────────────────────────────
 export function PageHero({
-  tag,
-  title,
-  subtitle,
-  breadcrumbs,
+  tag, title, subtitle, breadcrumbs,
 }: {
   tag?: string
   title: React.ReactNode
@@ -246,7 +163,7 @@ export function PageHero({
   )
 }
 
-// ─── Star Rating ─────────────────────────────────────────────
+// ─── Stars ────────────────────────────────────────────────────
 export function Stars({ count = 5 }: { count?: number }) {
   return (
     <div className="flex gap-0.5 text-gold text-sm">
@@ -257,7 +174,7 @@ export function Stars({ count = 5 }: { count?: number }) {
   )
 }
 
-// ─── Stats Strip ─────────────────────────────────────────────
+// ─── Stats Strip ──────────────────────────────────────────────
 export function StatsStrip({ stats }: { stats: { num: string; label: string }[] }) {
   return (
     <div className="bg-navy-mid">
@@ -272,5 +189,3 @@ export function StatsStrip({ stats }: { stats: { num: string; label: string }[] 
     </div>
   )
 }
-
-export default WhatsAppButton
